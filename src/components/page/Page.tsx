@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import { HStack, VStack } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
+import { Drawer } from "../navbar/Drawer";
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -8,9 +9,14 @@ interface Props {
 
 export function Page({ children }: Props): ReactElement {
   return (
-    <VStack w={"100%"} maxW={"100vw"} minH={"100vh"} bg={"bg.dark.default"}>
+    <VStack w="100%" maxW="100%" minH="100vh" bg="bg.dark.default">
       <NavBar />
-      {children}
+      <HStack>
+        <VStack w="25rem">
+          <Drawer />
+        </VStack>
+        {children}
+      </HStack>
     </VStack>
   );
 }

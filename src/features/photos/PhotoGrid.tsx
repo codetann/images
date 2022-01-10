@@ -11,9 +11,9 @@ export function PhotoGrid({ photos }: Props): ReactElement {
     <Box
       padding={4}
       w="100%"
-      maxW="900px"
+      maxW="100%"
       mx="auto"
-      sx={{ columnCount: [1, 2, 3], columnGap: "8px" }}
+      sx={{ columnCount: [1, 2, 3, 4], columnGap: "8px" }}
     >
       {photos.map((p: any) => (
         <Photo

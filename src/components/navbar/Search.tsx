@@ -20,7 +20,13 @@ export function Search({}: Props): ReactElement {
   };
 
   return (
-    <HStack spacing={0}>
+    <HStack
+      spacing={0}
+      border="1px solid transparent"
+      borderRadius=".5rem"
+      transition="all .2s ease-in-out"
+      // _hover={{ opacity: ".7" }}
+    >
       <chakra.form display={"flex"} onSubmit={handleSubmit}>
         <SlideFade in={isOpen} offsetY={0} offsetX={"10px"}>
           <Input
@@ -28,6 +34,9 @@ export function Search({}: Props): ReactElement {
             bg="whiteAlpha.100"
             borderColor={"transparent"}
             borderRadius=".5rem 0 0 .5rem"
+            w="20rem"
+            // _hover={{}}
+            // _focus={{ bg: "none", borderColor: "whiteAlpha.500" }}
           />
         </SlideFade>
         <IconButton
