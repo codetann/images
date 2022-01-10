@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
-import { HStack, chakra, Image } from "@chakra-ui/react";
+import { HStack, chakra, Image, useDisclosure } from "@chakra-ui/react";
+import { PhotoModal } from "./PhotoModal";
 
 type Src = {
   original: string;
@@ -27,40 +28,24 @@ export function Photo({
   color,
   src,
 }: Props): ReactElement {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <Image
-      d="inline-block"
-      borderRadius="xl"
-      src={src.large}
-      alt="Alt"
-      key="src"
-      w="100%"
-      mb={2}
-      cursor="pointer"
-      transition="all 0.2s ease-in-out"
-      _hover={{ transform: "scale(1.02)" }}
-    />
+    <>
+      <Image
+        transition="all 0.2s ease-in-out"
+        _hover={{ opacity: 0.8 }}
+        borderRadius="xl"
+        cursor="pointer"
+        d="inline-block"
+        onClick={onOpen}
+        src={src.large}
+        alt="Alt"
+        key="src"
+        w="100%"
+        mb={2}
+      />
+      <PhotoModal isOpen={isOpen} onClose={onClose} src={src.original} />
+    </>
   );
 }
-
-// const Test = () => (
-//   <Image
-//     d="inline-block"
-//     borderRadius="xl"
-//     src={src.large}
-//     alt="Alt"
-//     key="src"
-//     w={isFocused ? "200px" : "100%"}
-//     top={isFocused ? "50%" : "auto"}
-//     left={isFocused ? "50%" : "auto"}
-//     zIndex={50}
-//     mb={2}
-//     cursor="pointer"
-//     transition="all 0.2s ease-in-out"
-//     position={isFocused ? "absolute" : "relative"}
-//     _hover={{
-//       transform: "scale(1.02)",
-//     }}
-//     onClick={() => setIsFocused(!isFocused)}
-//   />
-// );
