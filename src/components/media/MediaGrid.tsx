@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
-import { Photo } from "./components/Photo";
+import { Photo } from "./MediaGridItem";
 import { Box } from "@chakra-ui/react";
 
 interface Props {
-  photos: any;
+  media: any;
 }
 
-export function PhotoGrid({ photos }: Props): ReactElement {
+export function MediaGrid({ media }: Props): ReactElement {
   return (
     <Box
       padding={4}
@@ -15,7 +15,7 @@ export function PhotoGrid({ photos }: Props): ReactElement {
       mx="auto"
       sx={{ columnCount: [1, 2, 3, 4], columnGap: "8px" }}
     >
-      {photos.map((p: any) => (
+      {media.map((p: any) => (
         <Photo
           photographer={p.photographer}
           color={p.color}

@@ -11,7 +11,7 @@ export function Page({ children }: Props): ReactElement {
   return (
     <VStack w="100%" maxW="100%" minH="100vh" bg="bg.dark.default">
       <NavBar />
-      <HStack>
+      <HStack w="100%">
         <VStack w="25rem">
           <Drawer />
         </VStack>

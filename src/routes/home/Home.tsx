@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { VStack } from "@chakra-ui/react";
-import { PhotoGrid } from "../../features/photos";
+import { MediaGrid } from "@components";
 import data from "../../features/photos/components/data.json";
 
 interface Props {}
@@ -8,7 +8,7 @@ interface Props {}
 export function Home({}: Props): ReactElement {
   return (
     <VStack w="100%" h="100%">
-      <PhotoGrid photos={data} />
+      <MediaGrid media={data} />
     </VStack>
   );
 }

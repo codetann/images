@@ -1,0 +1,46 @@
+[
+  {
+    "name": "All",
+    "value": "all"
+  },
+  {
+    "name": "Nature",
+    "value": "nature"
+  },
+  {
+    "name": "People",
+    "value": "people"
+  },
+  {
+    "name": "Animals",
+    "value": "animals"
+  },
+  {
+    "name": "Food",
+    "value": "food"
+  },
+  {
+    "name": "Travel",
+    "value": "travel"
+  },
+  {
+    "name": "Tech",
+    "value": "tech"
+  },
+  {
+    "name": "Art",
+    "value": "art"
+  },
+  {
+    "name": "Cars",
+    "value": "cars"
+  },
+  {
+    "name": "Sports",
+    "value": "sports"
+  },
+  {
+    "name": "Fashion",
+    "value": "fashion"
+  }
+]
