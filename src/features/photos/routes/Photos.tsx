@@ -1,4 +1,4 @@
-import { Page, Menu } from "@components";
+import { Menu } from "@components";
 import { VStack, HStack } from "@chakra-ui/react";
 import categories from "../data/categories.json";
 
