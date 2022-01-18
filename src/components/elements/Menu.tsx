@@ -1,20 +1,17 @@
-import { EventHandler, FormEventHandler, useState } from "react";
+import { useState } from "react";
 import {
   Menu as CMenu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
   ChakraProps,
   Button,
-  ChakraComponent,
 } from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
 
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+
+import { styles } from "./styles";
 
 interface Props {
   onChange: (value: any) => void;
@@ -33,20 +30,6 @@ interface Option {
 }
 
 type MenuOptions = Option[];
-
-const styles: Styles = {
-  menuButton: {
-    bg: "whiteAlpha.100",
-    textAlign: "left",
-    p: ".5rem 1rem",
-    rounded: "md",
-    w: "10rem",
-    h: "3rem",
-  },
-  menuList: {
-    bg: "whiteAlpha.100",
-  },
-};
 
 export function Menu({ onChange, title, options }: Props): ReactElement {
   const [currentValue, setCurrentValue] = useState(null);
