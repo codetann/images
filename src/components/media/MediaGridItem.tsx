@@ -1,6 +1,7 @@
-import React, { ReactElement } from "react";
-import { HStack, chakra, Image, useDisclosure } from "@chakra-ui/react";
+import { ReactElement } from "react";
+import { Image, useDisclosure } from "@chakra-ui/react";
 import { MediaGridModal } from "./MediaGridModal";
+import { styles } from "./styles";
 
 type Src = {
   original: string;
@@ -33,17 +34,11 @@ export function Photo({
   return (
     <>
       <Image
-        transition="all 0.2s ease-in-out"
-        _hover={{ opacity: 0.8 }}
-        borderRadius="xl"
-        cursor="pointer"
-        d="inline-block"
+        {...styles.image}
         onClick={onOpen}
         src={src.large}
         alt="Alt"
         key="src"
-        w="100%"
-        mb={2}
       />
       <MediaGridModal isOpen={isOpen} onClose={onClose} src={src.original} />
     </>
