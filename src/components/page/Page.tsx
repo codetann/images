@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { HStack, VStack } from "@chakra-ui/react";
+import { HStack, VStack, useDisclosure } from "@chakra-ui/react";
 import { NavBar } from "../navbar/NavBar";
 import { Drawer } from "../navbar/Drawer";
 
@@ -8,14 +8,16 @@ interface Props {
 }
 
 export function Page({ children }: Props): ReactElement {
+  const { isOpen, onToggle } = useDisclosure();
+
   return (
     <VStack w="100%" maxW="100%" minH="100vh" bg="bg.dark.default">
-      <NavBar />
       <HStack w="100%">
-        <VStack w="25rem">
-          <Drawer />
+        <Drawer isOpen={isOpen} onClose={onToggle} />
+        <VStack w="100%" h="100%">
+          <NavBar onOpen={onToggle} />
+          {children}
         </VStack>
-        {children}
       </HStack>
     </VStack>
   );

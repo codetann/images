@@ -8,6 +8,7 @@ export interface DrawerLinkProps {
   href: string;
   icon: ReactElement;
   path: string;
+  onClose: () => void;
 }
 
 export interface Styles {

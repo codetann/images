@@ -13,7 +13,7 @@ export function MediaGrid({ media }: Props): ReactElement {
       w="100%"
       maxW="100%"
       mx="auto"
-      sx={{ columnCount: [1, 2, 3, 4], columnGap: "8px" }}
+      sx={{ columnCount: [1, 1, 2, 3, 4, 5], columnGap: "8px" }}
     >
       {media.map((p: any) => (
         <Photo

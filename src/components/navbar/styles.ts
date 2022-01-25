@@ -11,20 +11,21 @@ const button: Styles["button"] = (props) => ({
 });
 
 const vstack: Styles["vstack"] = {
+  // transform: isOpen ? "translateX(0rem)" : "translateX(-20rem)",
+  // transition: "all 0.2s ease-in-out",
   justifyContent: "center",
+  alignItems: "center",
+  bg: "bg.dark.default",
   spacing: "2rem",
-  pos: "fixed",
   w: "20rem",
   h: "100%",
-  left: 0,
-  top: 0,
 };
 
 const text: Styles["text"] = {
   pl: "1rem",
 };
 
-export const styles: Styles = {
+export const drawer: Styles = {
   button,
   vstack,
   text,
