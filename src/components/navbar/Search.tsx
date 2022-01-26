@@ -28,7 +28,7 @@ export function Search({}: Props): ReactElement {
       borderRadius=".5rem"
       spacing={0}
     >
-      <chakra.form display={"flex"} onSubmit={handleSubmit}>
+      <chakra.form display="flex" onSubmit={handleSubmit}>
         <Input
           borderRadius=".5rem 0 0 .5rem"
           placeholder="Search here..."

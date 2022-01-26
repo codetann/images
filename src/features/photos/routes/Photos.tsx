@@ -1,6 +1,7 @@
-import { Menu } from "@components";
+import { Menu, MediaGrid } from "@components";
 import { VStack, HStack } from "@chakra-ui/react";
 import categories from "../data/categories.json";
+import data from "../components/data.json";
 
 export function Photos() {
   return (
@@ -12,6 +13,7 @@ export function Photos() {
           options={categories}
         />
       </HStack>
+      <MediaGrid media={data} />
     </VStack>
   );
 }

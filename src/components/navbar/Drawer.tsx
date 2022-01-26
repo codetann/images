@@ -14,7 +14,6 @@ import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaImage, FaFilm, FaHeart } from "react-icons/fa";
 import { drawer } from "./styles";
 import { DrawerLinkProps } from "./types";
-import { Search } from "./Search";
 
 interface DrawerProps {
   children?: ReactElement | ReactElement[];
